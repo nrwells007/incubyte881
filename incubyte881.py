@@ -104,12 +104,12 @@ def execute_commands(commands, initial_position, initial_direction):
     return spacecraft.position, spacecraft.main_direction
 
 
-# In[17]:
+# In[20]:
 
 
 initial_position = [0, 0, 0]
-initial_direction = "N"
-commands = ["f", "r", "u", "b", "l"]
+initial_direction = input("Enter initial direction (N/S/E/W): ")
+commands = input("Enter commands (f/r/u/b/l without spaces): ")
 final_position, final_direction = execute_commands(commands, initial_position, initial_direction)
 print("Final Position:", final_position)
 print("Final Direction:", final_direction)
