@@ -38,8 +38,9 @@ class TestSpacecraft(unittest.TestCase):
 
     def test_execute_commands(self):
         initial_position = [0, 0, 0]
-        initial_direction = "N"
-        commands = ["f", "r", "u", "b", "l"]
+        print("\nFor Unit Testing")
+        initial_direction = input("Enter initial direction (N/S/E/W): ")
+        commands = input("Enter commands (f/r/u/b/l without spaces): ")
         final_position, final_direction = execute_commands(commands, initial_position, initial_direction)
         self.assertEqual(final_position, [0, 1, -1])
         self.assertEqual(final_direction, "N")
